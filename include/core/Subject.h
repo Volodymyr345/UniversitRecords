@@ -1,0 +1,14 @@
+#ifndef SUBJECT_H
+#define SUBJECT_H
+#include <string>
+class Subject {
+    private:
+        std::string subject_name;
+        int grade;
+    public:
+        Subject(std::string name, int grade);
+        int get_grade(){
+            return grade;
+        }
+};
+#endif
