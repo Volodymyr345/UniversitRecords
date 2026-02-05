@@ -5,7 +5,7 @@
 class Printable {
     friend std::ostream &operator<<(std::ostream &os, Printable &printable);
 protected:
-    void print(std::ostream &os);
+    virtual void print(std::ostream &os) const = 0;
     
 };
 #endif

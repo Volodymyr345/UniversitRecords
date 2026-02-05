@@ -6,9 +6,7 @@ class Subject {
         std::string subject_name;
         int grade;
     public:
-        Subject(std::string name, int grade);
-        int get_grade(){
-            return grade;
-        }
+        Subject(const std::string &name, int grade);
+        int get_grade();
 };
 #endif
