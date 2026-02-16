@@ -1,10 +1,15 @@
 
 #include <iostream>
+#include <string>
 
-#include "Person.h"
+#include "University.h"
+
+
 
 int main(int argc, char const *argv[])
 {
-    std::cout << "Hello world" << std::endl;
-    return 0;
+    University university;
+
+
+    
 }

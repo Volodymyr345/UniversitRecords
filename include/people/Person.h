@@ -3,11 +3,12 @@
 #include "Printable.h"
 class Person : 
     public Printable {
-        private:
+        protected:
             int age;
             std::string name;
         public:
             Person(int age,const std::string &name);
+            std::string get_name() const;
 
 };
 

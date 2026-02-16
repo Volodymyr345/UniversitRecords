@@ -14,9 +14,10 @@ class Student :
     public:
         Student(int age, const std::string &name, const std::string &course);
         
+
         void print(std::ostream &os) const override final;
         
-        bool add_subjects();
+        bool add_subjects(std::string subjectName);
 
 };
 
