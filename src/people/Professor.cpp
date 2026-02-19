@@ -6,17 +6,25 @@ Professor::Professor(int age,const std::string &name,const std::string &subjectN
 }
 
 
-bool Professor::set_grade(std::shared_ptr<Subject> subject, int grade) {
-    if(subject->get_subjectName() == subjectName) {
-        subject->set_grade(grade);
-        return true;
+//an instance of a Professor can set a greade for particular subject,
+
+bool Professor::set_grade(std::shared_ptr<Student> &student, int grade) const{
+    std::vector<std::shared_ptr<Subject>> &subjects = (*student).subjects; 
+    for(const std::shared_ptr<Subject>& subject : subjects){
+        if(subject->get_subjectName() == subjectName) {
+            subject->set_grade(grade);
+            return true;
+        }
     }
     return false;
 }
 
-bool Professor::operator<(const Professor &other) const {
-        return std::tie(age, name, subjectName) < std::tie(other.age, other.name, other.subjectName);
+bool Professor::operator<(const Professor &other) const{
+        return std::tie(age, name, subjectName) < 
+        std::tie(other.age, other.name, other.subjectName);
 }
+
+//printing Professor instance
 
 void Professor::print(std::ostream &os) const{
     os << "===========================" << std::endl;

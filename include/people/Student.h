@@ -8,12 +8,12 @@
 #include "Person.h"
 class Student : 
     public Person{
+        friend class Professor;
     private:
         std::string course;
         std::vector <std::shared_ptr<Subject>> subjects{};
     public:
         Student(int age, const std::string &name, const std::string &course);
-        
 
         void print(std::ostream &os) const override final;
         
