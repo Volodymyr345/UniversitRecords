@@ -14,6 +14,9 @@ bool Professor::set_grade(std::shared_ptr<Subject> subject, int grade) {
     return false;
 }
 
+bool Professor::operator<(const Professor &other) const {
+        return std::tie(age, name, subjectName) < std::tie(other.age, other.name, other.subjectName);
+}
 
 void Professor::print(std::ostream &os) const{
     os << "===========================" << std::endl;

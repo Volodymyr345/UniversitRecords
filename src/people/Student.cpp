@@ -7,7 +7,6 @@ bool Student::add_subjects(std::string subjectName) {
 
     subjects.push_back(std::make_shared <Subject>(subjectName));
     
-    
     return true;
 }
 

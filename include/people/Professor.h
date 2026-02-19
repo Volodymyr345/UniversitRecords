@@ -12,12 +12,11 @@ private:
 public:
     Professor(int age, const std::string &name,const std::string &subjectName);
     bool set_grade(std::shared_ptr<Subject> subject, int grade);
-    
+
+    //printing Professor instance fields...
     void print(std::ostream &os)const override final;
-    bool operator<(const Professor &other) const {
-        return std::tie(age, name, subjectName) < 
-        std::tie(other.age, other.name, other.subjectName);
-    }
+    
+    bool operator<(const Professor &other) const;
 };
 
 #endif
