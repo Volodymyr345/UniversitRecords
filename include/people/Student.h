@@ -10,13 +10,14 @@ class Student :
     public Person{
         friend class Professor;
     private:
-        std::string course;
+        std::string courseName;
         std::vector <std::shared_ptr<Subject>> subjects{};
     public:
-        Student(int age, const std::string &name, const std::string &course);
+        Student(int age, const std::string &name, const std::string &courseName);
 
         void print(std::ostream &os) const override final;
         
+        size_t get_amount_subjects() const;
         bool add_subjects(std::string subjectName);
 
 };

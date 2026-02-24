@@ -1,6 +1,6 @@
 #include "Student.h"
-Student::Student(int age, const std::string &name, const std::string &course) : 
-    Person(age, name), course{course} {
+Student::Student(int age, const std::string &name, const std::string &courseName) : 
+    Person(age, name), courseName{courseName} {
 }
 
 bool Student::add_subjects(std::string subjectName) {
@@ -12,13 +12,16 @@ bool Student::add_subjects(std::string subjectName) {
     return true;
 }
 
+size_t Student::get_amount_subjects() const{
+    return subjects.size();
+}
 
 void Student::print(std::ostream &os) const {
     os << "===========================" << std::endl;
     os << "Student" << std::endl;
     os << "Name: " << name << std::endl;
     os << "Age: " << age << std::endl;
-    os << "Course: " << course << std::endl;
+    os << "Course: " << courseName << std::endl;
     os << "Subjects: "<< std::endl;
     os << "---------------------------" << std::endl;
     for(const std::shared_ptr<Subject> &subject : subjects){

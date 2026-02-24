@@ -21,6 +21,7 @@ public:
     
     bool set_grade(std::shared_ptr<Student> &student, int grade) const;
     
+    std::string get_subject_name() const;
 
 };
 
