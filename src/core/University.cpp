@@ -1,4 +1,5 @@
 #include "University.h"
+
 bool University::add_student(int age, const std::string&studentName, const std::string& course){
     for(std::shared_ptr<Student> &student : students)
         if(check_if_exists(*student, studentName)){
@@ -70,6 +71,7 @@ bool University::check_if_exists(const Person &person, const std::string &text) 
 bool University::check_if_exists(const Person &person, const Person &sec_person) { return person.get_name() == sec_person.get_name(); }
 
 void University::print_professors_students() const {
+    
     for(const auto & prof_stud : professor_students){
         std::cout << prof_stud.first; //printing professor
         for(const auto & student : *(prof_stud.second)){

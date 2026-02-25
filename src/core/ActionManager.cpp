@@ -31,13 +31,13 @@ void ActionManager::do_action(char c) {
         input(*command);
     switch(*command){
         case Command::ADD_STUDENT:
-            std::cout << uni.add_student(inputpers.age, inputpers.name, inputpers.courseName) << std::endl;
+            uni.add_student(inputpers.age, inputpers.name, inputpers.courseName);
             break;
         case Command::ADD_PROFESSOR:
             uni.add_professor(inputpers.age, inputpers.name, inputpers.subjectName);
             break;
         case Command::ADD_STUD_SUBJECT:
-            std::cout << uni.add_stud_subj(inputpers.subjectName, inputpers.name) << std::endl;
+            uni.add_stud_subj(inputpers.subjectName, inputpers.name);
             break;
         case Command::SET_GRADE:
             uni.set_grade(inputpers.name, inputpers.compare_name, inputpers.grade);
@@ -59,6 +59,7 @@ void ActionManager::input(Command &command) {
     std::cin >> inputpers.name;
     
     if(command == Command::ADD_STUDENT || command == Command::ADD_PROFESSOR) {
+        
         std::cout << "Enter age: ";
         std::cin >> inputpers.age;
     }

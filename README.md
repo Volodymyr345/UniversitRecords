@@ -1,6 +1,14 @@
-<<<<<<< HEAD
-"# decentralized-app" 
-=======
 # UniversitRecords
-Managing students, professors and academic records on C++
->>>>>>> 54db835729f09c5da3b186f72174d890b7a2ed7a
+
+A small C++ console project for managing students, professors, subjects, and academic records.
+
+## Features
+- Add students and professors
+- Assign subjects to students
+- Set grades and track academic records
+- View lists and basic info
+
+
+## Tech stack
+- C++ (STL)
+
