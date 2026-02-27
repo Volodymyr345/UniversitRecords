@@ -4,7 +4,7 @@
 #include <iomanip>
 #include "ActionManager.h"
 
-int main(int argc, char const *argv[])
+int main()
 {
     ActionManager actMan;
     char choice;
